@@ -140,3 +140,14 @@ git版本控制工具(https://www.liaoxuefeng.com/wiki/0013739516305929606dd1836
 
         删除分支：git branch -d <name>
     (2) 解决冲突
+        小结
+        当Git无法自动合并分支时，就必须首先解决冲突。解决冲突后，再提交，合并完成。
+        用git log --graph命令可以看到分支合并图。
+    (3) 分支管理策略
+    (4) Bug分支
+    (5) 多人协作
+        ① git remote -v显示远程仓库的信息
+        ② 当你的小伙伴从远程库clone时，默认情况下，你的小伙伴只能看到本地的master分支。
+        ③ 现在，你的小伙伴要在dev分支上开发，就必须创建远程origin的dev分支到本地，于是他用这个命令创建本地dev分支：
+            git checkout -b dev origin/dev
+        ④ 现在，他就可以在dev上继续修改，然后，时不时地把dev分支push到远程：
